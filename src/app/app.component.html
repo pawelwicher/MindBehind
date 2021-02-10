@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Mind Behind</h1>
+  <h1>{{ 'Mind Behind' + ' - ' + selectedModel.id }}</h1>
   <div class="buttons-container">
     <button *ngFor="let item of models" (click)="selectedModel = item" [ngClass]="{'selected': selectedModel === item}">{{ item.id }}</button>
   </div>

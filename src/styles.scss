@@ -21,9 +21,7 @@ p {
 }
 
 button {
-  font-size: 14px;
-  height: 25px;
-  width: 100px;
+  padding: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
   &.selected {
@@ -38,10 +36,7 @@ video {
 }
 
 .container {
-  margin-top: 10px;
-  margin-right: 25px;
-  margin-bottom: 25px;
-  margin-left: 25px;
+  margin: 25px;
 }
 
 .buttons-container {
