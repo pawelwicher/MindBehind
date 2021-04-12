@@ -1,11 +1,11 @@
 <div class="container">
   <h1>{{ 'Mind Behind' + ' - ' + selectedModel.id }}</h1>
-  <div class="buttons-container">
-    <button *ngFor="let item of models" (click)="selectedModel = item" [ngClass]="{'selected': selectedModel === item}">{{ item.id }}</button>
-  </div>
+  <select [(ngModel)]="selectedModel">
+    <option *ngFor="let item of models" [ngValue]="item">{{ item.id }}</option>
+  </select>
   <div *ngFor="let item of selectedModel.items; index as index">
     <p>{{ (index + 1) + '. ' + item.name }}</p>
-    <video width="720" height="480" controls>
+    <video controls>
       <source src="{{ item.filePath }}" type="video/mp4">
     </video>
   </div>

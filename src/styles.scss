@@ -11,8 +11,22 @@ body {
   width: 100%;
 }
 
+.container {
+  margin: auto;
+  width: 50%;
+  padding-top: 20px;
+}
+
 h1 {
   font-size: 24px;
+}
+
+select {
+  width: 150px;
+  height: 30px;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 p {
@@ -20,28 +34,12 @@ p {
   margin-bottom: 5px;
 }
 
-button {
-  padding: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  &.selected {
-    font-weight: bold;
-  }
-}
-
 video {
+  width: 100%;
+  height: auto;
+  max-width: 720px;
+  max-height: 480px;
   border: solid;
   border-radius: 4px;
   margin-bottom: 40px;
-}
-
-.container {
-  margin: 25px;
-}
-
-.buttons-container {
-  display: inline-block;
-  width: 720px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }

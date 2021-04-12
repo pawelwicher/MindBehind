@@ -13,7 +13,8 @@ export class AppComponent implements OnInit {
   public models: DataModel[] = [];
   public selectedModel: DataModel = { id: '', items: [] };
 
-  constructor(private dataService: DataService) { }
+  constructor(
+    private dataService: DataService) { }
 
   public ngOnInit(): void {
     this.dataService.getData().subscribe(
@@ -22,6 +23,11 @@ export class AppComponent implements OnInit {
         this.selectedModel = this.models[0];
       }
     );
+  }
+
+  public onChange(item: DataModel): void {
+    console.log(item)
+    this.selectedModel = item;
   }
 
   private mapDtoToModel(dto: DataDto): DataModel {
